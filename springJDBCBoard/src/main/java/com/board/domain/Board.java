@@ -10,5 +10,8 @@ public class Board {
 	private String title; 
 	private String content; 
 	private String writer; 
-	private Date regDate; 
+	private Date regDate;
+	//검색항목
+	private String searchType;
+	private String keyword;
 }

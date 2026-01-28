@@ -1,11 +1,6 @@
-입력 화면에서 보여준 전문가적인 디자인 톤을 그대로 유지하면서, **성공 페이지(success.jsp)**를 한층 더 세련되게 다듬어 보았습니다.
-
-특히 입력 화면의 상단 헤더 컬러(#4e73df)와 통일감을 주었고, 사용자가 액션을 명확히 인지할 수 있도록 레이아웃을 최적화했습니다.
-
-🎨 스타일이 완벽하게 통일된 성공 화면 (success.jsp)
-HTML
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -80,8 +75,7 @@ HTML
             
             <h2 class="msg-title mb-3">게시글 등록 성공</h2>
             <p class="msg-desc mb-4">
-                작성하신 게시글이 데이터베이스에<br> 
-                안전하게 저장되었습니다.
+                <h1>"${message}"</h1>
             </p>
 
             <hr class="my-4" style="opacity: 0.1;">

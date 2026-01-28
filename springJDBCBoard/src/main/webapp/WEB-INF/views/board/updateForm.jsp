@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -56,16 +57,16 @@ body {
 		<div class="card">
 			<div class="card-header">
 				<h4 class="mb-0">
-					<i class="bi bi-pencil-square me-2"></i>게시판
+					<i class="bi bi-pencil-square me-2"></i>${board.writer}님의 게시판수정
 				</h4>
 			</div>
 			<div class="card-body p-4">
-				<form action="/board/insert" method="post">
+				<form action="/board/update" method="post">
 
 					<div class="mb-4">
-						<label for="title" class="form-label">제목</label> <input
-							type="text" class="form-control form-control-lg" id="title"
-							name="title" placeholder="제목을 입력해 주세요" required>
+						<label for="no" class="form-label">작성자번호</label> <input
+							type="text" class="form-control form-control-lg" id="no"
+							name="no" value="${board.no}" readonly>
 					</div>
 
 					<div class="mb-4">
@@ -73,14 +74,20 @@ body {
 						<div class="input-group">
 							<span class="input-group-text"><i class="bi bi-person"></i></span>
 							<input type="text" class="form-control" id="writer" name="writer"
-								placeholder="작성자 성함" required>
+								value="${board.writer}" required>
 						</div>
 					</div>
 
 					<div class="mb-4">
+						<label for="title" class="form-label">제목</label>
+						<textarea class="form-control" id="title" name="title" rows="8"
+							value="${board.writer}" style="resize: none;"></textarea>
+					</div>
+					<div class="mb-4">
 						<label for="content" class="form-label">내용</label>
 						<textarea class="form-control" id="content" name="content"
-							rows="8" placeholder="내용을 상세히 작성해 주세요" style="resize: none;"></textarea>
+							rows="8" name="writer" value="${board.writer}"
+							style="resize: none;">${board.content}</textarea>
 					</div>
 
 					<hr class="my-4">
@@ -89,10 +96,10 @@ body {
 						<a href="/board/boardList"><button type="button"
 								class="btn btn-outline-secondary">게시판리스트</button></a>
 						<button type="submit" class="btn btn-primary btn-submit">
-							</i> 게시판전송
+							</i> 수정전송
 						</button>
 						<button type="reset" class="btn btn-primary btn-submit">
-							게시판삭제</button>
+							수정취소</button>
 					</div>
 
 				</form>
