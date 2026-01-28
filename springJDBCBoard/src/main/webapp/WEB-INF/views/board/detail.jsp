@@ -1,9 +1,3 @@
-이번에는 게시글 상세 보기(Detail) 화면이군요! 이미 T1 테마의 블랙 & 레드 컨셉을 아주 잘 잡으셨습니다.
-
-여기에 이전 페이지들과의 통일감을 위해 Bootstrap Icons를 추가하고, 시각적으로 좀 더 입체감 있는 카드 레이아웃과 글래스모피즘(Glassmorphism) 효과를 살짝 가미하여 더 전문가스러운 "게시판 상세 화면"으로 다듬어 보겠습니다.
-
-🏎️ T1 컨셉 게시글 상세 보기 (detail.jsp)
-HTML
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>

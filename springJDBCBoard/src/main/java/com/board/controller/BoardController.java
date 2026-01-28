@@ -44,7 +44,7 @@ public class BoardController {
 
 	@GetMapping("/boardList") // 오타 수정
 	public String boardList(Model model) {
-	    log.info("boardList 호출");
+	    log.info("boardList");
 	    try {
 	        List<Board> boardList = boardService.boardList();
 	        model.addAttribute("boardList", boardList); // 이름 일치 시킴
